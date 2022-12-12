@@ -1,0 +1,18 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - http_proxy=$http_proxy
+        - HTTP_PROXY=$HTTP_PROXY
+        - https_proxy=$https_proxy
+        - HTTPS_PROXY=$HTTPS_PROXY
+    tty: true
+    volumes:
+      - ./app:/app
+    environment:
+      - http_proxy=$http_proxy
+      - HTTP_PROXY=$HTTP_PROXY
+      - https_proxy=$https_proxy
+      - HTTPS_PROXY=$HTTPS_PROXY

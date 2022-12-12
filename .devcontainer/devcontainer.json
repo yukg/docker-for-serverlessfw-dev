@@ -1,0 +1,17 @@
+{
+    "dockerComposeFile": ["../compose.yaml"],
+    "service": "node",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    
+    "initializeCommand": "powershell New-Item app -ItemType Directory -Force | exit",
+    "workspaceFolder": "/app"
+}
+
+
